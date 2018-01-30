@@ -12,13 +12,18 @@ jQuery(function($) {
 
   $('#form').on("submit", function(e) {
     var email = $('#email').val();
+    var passwd = $('#password').val();
     var reg = /^([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     e.preventDefault();
 
     $('#info-email').removeClass('red');
+    $('#info-password').removeClass('red');
     if (email !== '') {
       if (!reg.test(email)) {
         $('#info-email').addClass('red');
+        return false;
+      } else if (passwd.length < 8 || passwd.length > 16) {
+        $('#info-password').addClass('red');
         return false;
       } else {
         $(this).remove();
