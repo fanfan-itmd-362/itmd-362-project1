@@ -47,6 +47,12 @@ li {
 #info-agree {
   padding-bottom: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
 }
+#terms {
+  font-size: 0.8888888889em; /* 16 / 18 = 0.8888888889 */
+  line-height: 1.375em; /* 22 / 16 = 1.375 */
+  font-weight: lighter;
+  padding-bottom: 1.375em; /* 22 / 16 = 1.375 */
+}
 #submitted {
   padding-top: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
 }
