@@ -27,7 +27,7 @@ jQuery(function($) {
         return false;
       } else {
         $(this).remove();
-        $('body').append('<li id="submitted">Your contact information has been submitted.</li>');
+        $('body').append('<li id="submitted">Welcome to our community</li>');
         return true;
       }
     }

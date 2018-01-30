@@ -54,7 +54,9 @@ li {
   padding-bottom: 1.375em; /* 22 / 16 = 1.375 */
 }
 #submitted {
-  padding-top: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
+  font-size: 1.333em; /* 23.994 / 18 = 1.333 */
+  font-weight: lighter;
+  line-height: 1.375343836em; /* 33 / 23.994 = 1.375343836 */
 }
 
 .red {
@@ -63,8 +65,8 @@ li {
 
 @media screen and (min-width: 320px) {
   body {
-  padding-right: 13.75%; /* 44 / 375 = 0.1375% */
-  padding-left: 13.75%; /* 44 / 375 = 0.1375% */
+    padding-right: 13.75%; /* 44 / 375 = 0.1375% */
+    padding-left: 13.75%; /* 44 / 375 = 0.1375% */
   }
 }
 @media screen and (min-width: 640px) {
