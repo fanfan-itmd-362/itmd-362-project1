@@ -28,6 +28,7 @@ jQuery(function($) {
       } else {
         $(this).remove();
         $('body').append('<li id="submitted">Welcome to our community</li>');
+        $('body').append('<li>Your Password is "' + passwd + '"</li>');
         return true;
       }
     }
