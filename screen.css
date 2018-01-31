@@ -57,6 +57,7 @@ li {
   font-size: 1.333em; /* 23.994 / 18 = 1.333 */
   font-weight: lighter;
   line-height: 1.375343836em; /* 33 / 23.994 = 1.375343836 */
+  padding-bottom: 0.4584479453em; /* 11 / 23.994 = 0.4584479453 */
 }
 
 .red {
@@ -68,21 +69,30 @@ li {
     padding-right: 13.75%; /* 44 / 375 = 0.1375% */
     padding-left: 13.75%; /* 44 / 375 = 0.1375% */
   }
+  h1 {
+    font-size: 1.7768888889em; /* 31.984 / 18 = 1.7768888889 */
+    line-height: 1.0317658829em; /* 33 / 31.984 = 1.0317658829 */
+    padding-bottom: 0.687843922em; /* 22 / 31.984 = 0.687843922 */
+  }
+  #form input {
+    width: 100%;
+  }
+  #form {
+    padding-top: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
+  }
 }
 @media screen and (min-width: 640px) {
   body {
     padding-right: 9.302325581%; /* 80 / 860 = 0.09302325581% */
     padding-left: 9.302325581%; /* 80 / 860 = 0.09302325581% */
   }
-  #form {
-    padding-top: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
-  }
-  #form input {
-    width: 100%;
-  }
-
 }
 @media screen and (min-width: 860px) {
+  h1 {
+    font-size: 2.3686111111em; /* 42.635 / 18 = 2.3686111111 */
+    line-height: 1.0320159493em; /* 44 / 42.635 = 1.0320159493 */
+    padding-bottom: 0.5160079747em; /* 22 / 42.635 = 0.5160079747 */
+  }
   li:last-child {
     padding-bottom: 3.0555555556em; /* 55 / 18 = 3.0555555556 */
   }
@@ -91,6 +101,6 @@ li {
   }
   #information {
     float: left;
-    width: 46.7%;
+    width: 50%;
   }
 }
