@@ -13,11 +13,13 @@ jQuery(function($) {
   $('#form').on("submit", function(e) {
     var email = $('#email').val();
     var passwd = $('#password').val();
+    var birth = $('#birthday').val();
     var reg = /^([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     e.preventDefault();
 
     $('#info-email').removeClass('red');
     $('#info-password').removeClass('red');
+    $('#info-birthday').removeClass('red');
     if (email !== '') {
       if (!reg.test(email)) {
         $('#info-email').addClass('red');
@@ -25,7 +27,11 @@ jQuery(function($) {
       } else if (passwd.length < 8 || passwd.length > 16) {
         $('#info-password').addClass('red');
         return false;
-      } else {
+      } else if (is_eighteen(birth) === false) {
+        $('#info-birthday').addClass('red');
+        return false;
+      }
+      else {
         $(this).remove();
         $('body').append('<li id="submitted">Welcome to our community</li>');
         $('body').append('<li id="passwd">Your Password is "' + passwd + '"</li>');
@@ -34,4 +40,26 @@ jQuery(function($) {
       }
     }
   });
+function is_eighteen(birthday) {
+  var result = false;
+  var today = new Date();
+  var birth = {
+    raw: birthday.split('/')
+  };
+  var year = (today.getFullYear() - Number(birth.raw[2]));
+  var month = (today.getMonth() - Number(birth.raw[0]) + 1);
+  var date = (today.getDate() - Number(birth.raw[1]));
+
+  if (birthday.length > 0) {
+    if (year > 18) {
+      result = true;
+    } else if ((year > 18) && (month > 0)) {
+      result = true;
+    } else if ((month === 0) && (date >= 0)) {
+      result = true;
+    }
+  }
+
+  return result;
+}
 });
