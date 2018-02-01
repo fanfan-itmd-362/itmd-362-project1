@@ -15,20 +15,21 @@ jQuery(function($) {
     var passwd = $('#password').val();
     var birth = $('#birthday').val();
     var reg = /^([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    e.preventDefault();
 
-    $('#info-email').removeClass('red');
-    $('#info-password').removeClass('red');
-    $('#info-birthday').removeClass('red');
+    remove_red();
+
     if (email !== '') {
       if (!reg.test(email)) {
         $('#info-email').addClass('red');
+        $('#email').addClass('red');
         return false;
       } else if (passwd.length < 8 || passwd.length > 16) {
         $('#info-password').addClass('red');
+        $('#password').addClass('red');
         return false;
       } else if (is_eighteen(birth) === false) {
         $('#info-birthday').addClass('red');
+        $('#birthday').addClass('red');
         return false;
       }
       else {
@@ -39,7 +40,19 @@ jQuery(function($) {
         return true;
       }
     }
+
+    e.preventDefault();
   });
+
+  function remove_red() {
+    $('#info-email').removeClass('red');
+    $('#email').removeClass('red');
+    $('#info-password').removeClass('red');
+    $('#password').removeClass('red');
+    $('#info-birthday').removeClass('red');
+    $('#birthday').removeClass('red');
+  }
+
   function is_eighteen(birthday) {
     var result = false;
     var today = new Date();
