@@ -40,26 +40,26 @@ jQuery(function($) {
       }
     }
   });
-function is_eighteen(birthday) {
-  var result = false;
-  var today = new Date();
-  var birth = {
-    raw: birthday.split('/')
-  };
-  var year = (today.getFullYear() - Number(birth.raw[2]));
-  var month = (today.getMonth() - Number(birth.raw[0]) + 1);
-  var date = (today.getDate() - Number(birth.raw[1]));
+  function is_eighteen(birthday) {
+    var result = false;
+    var today = new Date();
+    var birth = {
+      raw: birthday.split('/')
+    };
+    var year = (today.getFullYear() - Number(birth.raw[2]));
+    var month = (today.getMonth() - Number(birth.raw[0]) + 1);
+    var date = (today.getDate() - Number(birth.raw[1]));
 
-  if (birthday.length > 0) {
-    if (year > 18) {
-      result = true;
-    } else if ((year > 18) && (month > 0)) {
-      result = true;
-    } else if ((month === 0) && (date >= 0)) {
-      result = true;
+    if (birthday.length > 0) {
+      if (year > 18) {
+        result = true;
+      } else if ((year > 18) && (month > 0)) {
+        result = true;
+      } else if ((month === 0) && (date >= 0)) {
+        result = true;
+      }
     }
-  }
 
-  return result;
-}
+    return result;
+  }
 });
