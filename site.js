@@ -29,6 +29,7 @@ jQuery(function($) {
         $(this).remove();
         $('body').append('<li id="submitted">Welcome to our community</li>');
         $('body').append('<li id="passwd">Your Password is "' + passwd + '"</li>');
+        $('#info-fun').addClass('green');
         return true;
       }
     }

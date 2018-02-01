@@ -61,12 +61,12 @@ li {
   line-height: 1.375343836em; /* 33 / 23.994 = 1.375343836 */
   padding-bottom: 0.4584479453em; /* 11 / 23.994 = 0.4584479453 */
 }
-#passwd {
-  padding-top: 2.4444444444em;
-}
 
 .red {
   color: #E91E63;
+}
+.green {
+  color: #7CB342;
 }
 
 @media screen and (min-width: 320px) {
@@ -91,6 +91,9 @@ li {
     padding-right: 9.302325581%; /* 80 / 860 = 0.09302325581% */
     padding-left: 9.302325581%; /* 80 / 860 = 0.09302325581% */
   }
+  #passwd {
+    padding-top: 0.6111111111em; /* 11 / 18 = 0.6111111111 */
+  }
 }
 @media screen and (min-width: 860px) {
   h1 {
@@ -107,5 +110,8 @@ li {
   #information {
     float: left;
     width: 50%;
+  }
+  #passwd {
+    padding-top: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
   }
 }
