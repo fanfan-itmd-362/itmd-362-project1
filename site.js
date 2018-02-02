@@ -14,13 +14,12 @@ jQuery(function($) {
     var email = $('#email').val();
     var passwd = $('#password').val();
     var birth = $('#birthday').val();
-    var reg = /^([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-
-    remove_red();
-
     var emailVerify = false;
     var passwordVerify = false;
     var birthdayVerify = false;
+    var reg = /^([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+    remove_red();
 
     if (email !== '') {
       if (!reg.test(email)) {
