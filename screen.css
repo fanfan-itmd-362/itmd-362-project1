@@ -40,6 +40,12 @@ input {
   line-height: 1em;
   background-color: #EEE;
 }
+input[type='submit'] {
+  width: 50%;
+  float: right;
+  background: #cacaca;
+  border-radius: .3em;
+}
 
 li {
   padding-bottom: 0.6111111111em; /* 11 / 18 = 0.6111111111 */
