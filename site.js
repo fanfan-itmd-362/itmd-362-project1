@@ -21,13 +21,11 @@ jQuery(function($) {
 
     remove_red();
 
-    if (email !== '') {
-      if (!reg.test(email)) {
-        $('#info-email').addClass('red');
-        $('#email').addClass('red');
-      } else {
-        emailVerify = true;
-      }
+    if (!reg.test(email)) {
+      $('#info-email').addClass('red');
+      $('#email').addClass('red');
+    } else {
+      emailVerify = true;
     }
     if (passwd.length < 8 || passwd.length > 16) {
       $('#info-password').addClass('red');
