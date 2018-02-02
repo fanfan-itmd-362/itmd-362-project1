@@ -75,7 +75,7 @@ jQuery(function($) {
     if (birthday.length > 0) {
       if (year > 18) {
         result = true;
-      } else if ((year > 18) && (month > 0)) {
+      } else if ((year === 18) && (month > 0)) {
         result = true;
       } else if ((month === 0) && (date >= 0)) {
         result = true;
