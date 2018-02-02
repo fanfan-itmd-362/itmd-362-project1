@@ -18,29 +18,39 @@ jQuery(function($) {
 
     remove_red();
 
+    var emailVerify = false;
+    var passwordVerify = false;
+    var birthdayVerify = false;
+
     if (email !== '') {
       if (!reg.test(email)) {
         $('#info-email').addClass('red');
         $('#email').addClass('red');
-        return false;
-      } else if (passwd.length < 8 || passwd.length > 16) {
-        $('#info-password').addClass('red');
-        $('#password').addClass('red');
-        return false;
-      } else if (is_eighteen(birth) === false) {
-        $('#info-birthday').addClass('red');
-        $('#birthday').addClass('red');
-        return false;
-      }
-      else {
-        $(this).remove();
-        $('body').append('<li id="submitted">Welcome to our community</li>');
-        $('body').append('<li id="passwd">Your Password is "' + passwd + '"</li>');
-        $('#info-fun').addClass('green');
-        return true;
+      } else {
+        emailVerify = true;
       }
     }
+    if (passwd.length < 8 || passwd.length > 16) {
+      $('#info-password').addClass('red');
+      $('#password').addClass('red');
+    } else {
+      passwordVerify = true;
+    }
+    if (is_eighteen(birth) === false) {
+      $('#info-birthday').addClass('red');
+      $('#birthday').addClass('red');
+      return false;
+    } else {
+      birthdayVerify = true;
+    }
 
+    if (emailVerify === true && passwordVerify === true && birthdayVerify === true) {
+      $(this).remove();
+      $('body').append('<li id="submitted">Welcome to our community</li>');
+      $('body').append('<li id="passwd">Your Password is "' + passwd + '"</li>');
+      $('#info-fun').addClass('green');
+      return true;
+    }
     e.preventDefault();
   });
 
