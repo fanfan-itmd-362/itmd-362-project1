@@ -90,6 +90,7 @@ li {
   }
   #form {
     padding-top: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
+    padding-bottom: 4.8888888889em; /* 88 / 18 = 4.8888888889 */
   }
 }
 @media screen and (min-width: 640px) {
