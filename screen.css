@@ -39,7 +39,7 @@ p {
 }
 
 label, input {
-  font-family: 'Roboto', sans-serif, Helvetica, Arial;
+  font-family: Roboto, sans-serif, Helvetica, Arial;
   display: block;
   margin-bottom: 0;
 }
@@ -63,7 +63,7 @@ input[type="submit"] {
 li {
   padding-bottom: 0.6111111111em; /* 11 / 18 = 0.6111111111 */
   list-style-type: none;
-  font-family: 'Roboto', sans-serif, Helvetica, Arial;
+  font-family: Roboto, sans-serif, Helvetica, Arial;
 }
 #info-agree {
   padding-bottom: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
