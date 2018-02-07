@@ -24,10 +24,22 @@ h1 {
   font-size: 2.3686111111em; /* 42.635 / 18 = 2.3686111111 */
   font-family: Pacifico;
   line-height: 1.0320159493em; /* 44 / 42.635 = 1.0320159493 */
-  padding-bottom: 0.5160079747em; /* 22 / 42.635 = 0.5160079747 */
+  padding-bottom: 1.0320159493em; /* 44 / 42.635 = 1.0320159493 */
+}
+h2 {
+  font-size: 1.7768888889em; /* 31.984 / 18 = 1.7768888889 */
+  font-family: Pacifico;
+  line-height: 1.3756878439em; /* 44 / 31.984 = 1.3756878439 */
+}
+
+p {
+  padding-top: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
+  padding-bottom: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
+  font-family: Courier;
 }
 
 label, input {
+  font-family: 'Roboto', sans-serif, Helvetica, Arial;
   display: block;
   margin-bottom: 0;
 }
@@ -51,6 +63,7 @@ input[type="submit"] {
 li {
   padding-bottom: 0.6111111111em; /* 11 / 18 = 0.6111111111 */
   list-style-type: none;
+  font-family: 'Roboto', sans-serif, Helvetica, Arial;
 }
 #info-agree {
   padding-bottom: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
@@ -106,8 +119,14 @@ li {
   h1 {
     font-size: 2.3686111111em; /* 42.635 / 18 = 2.3686111111 */
     line-height: 1.0320159493em; /* 44 / 42.635 = 1.0320159493 */
-    padding-bottom: 0.5160079747em; /* 22 / 42.635 = 0.5160079747 */
+    padding-bottom: 0.5160079747em; /* 33 / 42.635 = 0.5160079747 */
   }
+  h2 {
+    padding-top: 0.343921961em; /* 11 / 31.984 = 0.343921961 */
+    font-size: 1.7768888889em; /* 31.984 / 18 = 1.7768888889 */
+    line-height: 1.3756878439em; /* 44 / 31.984 = 1.3756878439 */
+  }
+
   li:last-child {
     padding-bottom: 3.0555555556em; /* 55 / 18 = 3.0555555556 */
   }
