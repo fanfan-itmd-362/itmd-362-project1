@@ -4,6 +4,16 @@
 
 A compelling single-page site that features a sign-up process to get new users to join some type of project, such as an email list, a software beta test, or an open-source community.
 
+```
+├── README.md
+├── _sketches
+│   └── sketches.pdf
+├── index.html
+├── robots.txt
+├── screen.css
+└── site.js
+```
+
 ## :whale:GitHub Pages
 
 [Go take a look](https://fanfan-itmd-362.github.io/itmd-362-project1/)
