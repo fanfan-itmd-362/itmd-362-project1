@@ -43,8 +43,7 @@ jQuery(function($) {
 
     if (emailVerify === true && passwordVerify === true && birthdayVerify === true) {
       $(this).remove();
-      $('body').append('<li id="submitted">Welcome to our community</li>');
-      $('body').append('<li id="passwd">Your Password is "' + passwd + '"</li>');
+      $('div').append('<section id="welcome"><ul><li id="submitted">Welcome to our community</li><li id="passwd">Your Password is "' + passwd + '"</li></ul></section>');
       $('#info-fun').addClass('green');
       return true;
     }
