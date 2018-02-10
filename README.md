@@ -20,6 +20,9 @@ A compelling single-page site that features a sign-up process to get new users t
 
 ## :sparkles:Thank You
 
+@ddelgad5:
+[48bbfdc](https://github.com/fanfan-itmd-362/itmd-362-project1/commit/48bbfdc5e752dfd958f9d9229c804e2443c83381)
+
 @Eirizarr: [5c71864](https://github.com/fanfan-itmd-362/itmd-362-project1/commit/5c7186493a07116ee75a77f87770f2a365b2a67e)
 
 @lwilcox: [68b59d6](https://github.com/fanfan-itmd-362/itmd-362-project1/commit/68b59d659d55fbfe8096d0de7dad0830255f3735)

@@ -59,6 +59,10 @@ input[type="submit"] {
   background: #cacaca;
   border-radius: 0.3em;
 }
+input:focus {
+  background-color: rgba(119,119,119,0.33);
+  transition: 0.4s;
+}
 
 li {
   padding-bottom: 0.6111111111em; /* 11 / 18 = 0.6111111111 */
