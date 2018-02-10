@@ -67,6 +67,7 @@ li {
   padding-bottom: 0.6111111111em; /* 11 / 18 = 0.6111111111 */
   list-style-type: none;
 }
+
 #info-agree {
   padding-bottom: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
 }
@@ -82,7 +83,6 @@ li {
   line-height: 1.375343836em; /* 33 / 23.994 = 1.375343836 */
   padding-bottom: 0.4584479453em; /* 11 / 23.994 = 0.4584479453 */
 }
-
 .red {
   color: #E91E63;
 }
@@ -102,12 +102,13 @@ li {
   h1 {
     font-size: 1.7768888889em; /* 31.984 / 18 = 1.7768888889 */
     line-height: 1.0317658829em; /* 33 / 31.984 = 1.0317658829 */
-    padding-bottom: 0.343921961em; /* 11 / 31.984 = 0.343921961 */
+    padding-bottom: 0.687843922em; /* 22 / 31.984 = 0.687843922 */
   }
   h2 {
     font-size: 1.333em; /* 23.994 / 18 = 1.333 */
     line-height: 1.375343836em; /* 33 / 23.994 = 1.375343836 */
   }
+
   #form input {
     width: 100%;
   }
@@ -128,6 +129,7 @@ li {
     padding-right: 9.302325581%; /* 80 / 860 = 0.09302325581% */
     padding-left: 9.302325581%; /* 80 / 860 = 0.09302325581% */
   }
+
   #passwd {
     padding-top: 0.6111111111em; /* 11 / 18 = 0.6111111111 */
   }
@@ -145,6 +147,17 @@ li {
 
   li:last-child {
     padding-bottom: 3.0555555556em; /* 55 / 18 = 3.0555555556 */
+  }
+
+  #banner {
+    background-image: url("media/iawu.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 30%;
+  }
+  #info-paragraph {
+    background-color: white;
   }
   #information {
     float: left;
