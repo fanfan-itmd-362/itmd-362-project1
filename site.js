@@ -27,7 +27,7 @@ jQuery(function($) {
     } else {
       emailVerify = true;
     }
-    if (passwd.length < 8 || passwd.length > 16) {
+    if (passwd.length < 8) {
       $('#info-password').addClass('red');
       $('#password').addClass('red');
     } else {
