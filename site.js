@@ -11,39 +11,43 @@ jQuery(function($) {
   $('html').addClass('hasjs');
 
   $('#form').on("submit", function(e) {
-    var email = $('#email').val();
-    var passwd = $('#password').val();
-    var birth = $('#birthday').val();
-    var emailVerify = false;
-    var passwordVerify = false;
-    var birthdayVerify = false;
+    var userInput = {
+      email: $('#email').val(),
+      passwd: $('#password').val(),
+      birthday: $('#birthday').val()
+    };
+    var verify = {
+      email: false,
+      passwd: false,
+      birthday: false
+    };
     var reg = /^([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
     remove_red();
 
-    if (!reg.test(email)) {
+    if (!reg.test(userInput.email)) {
       $('#info-email').addClass('red');
       $('#email').addClass('red');
     } else {
-      emailVerify = true;
+      verify.email = true;
     }
-    if (passwd.length < 8) {
+    if (userInput.passwd.length < 8) {
       $('#info-password').addClass('red');
       $('#password').addClass('red');
     } else {
-      passwordVerify = true;
+      verify.passwd = true;
     }
-    if (is_eighteen(birth) === false) {
+    if (is_eighteen(userInput.birthday) === false) {
       $('#info-birthday').addClass('red');
       $('#birthday').addClass('red');
       return false;
     } else {
-      birthdayVerify = true;
+      verify.birthday = true;
     }
 
-    if (emailVerify === true && passwordVerify === true && birthdayVerify === true) {
+    if (verify.email === true && verify.passwd === true && verify.birthday === true) {
       $(this).remove();
-      $('div').append('<section id="welcome"><ul><li id="submitted">Welcome to our community</li><li id="passwd">Your Password is "' + passwd + '"</li></ul></section>');
+      $('div').append('<section id="welcome"><ul><li id="submitted">Welcome to our community</li><li id="passwd">Your Password is "' + userInput.passwd + '"</li></ul></section>');
       $('#info-fun').addClass('green');
       return true;
     }
