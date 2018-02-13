@@ -130,6 +130,16 @@ li {
     padding-left: 9.302325581%; /* 80 / 860 = 0.09302325581% */
   }
 
+  #banner {
+    background-image: url("media/iawu.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 60%;
+  }
+  #info-paragraph {
+    background-color: white;
+  }
   #passwd {
     padding-top: 0.6111111111em; /* 11 / 18 = 0.6111111111 */
   }
@@ -150,14 +160,7 @@ li {
   }
 
   #banner {
-    background-image: url("media/iawu.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    padding-top: 30%;
-  }
-  #info-paragraph {
-    background-color: white;
+    padding-top: 40%;
   }
   #information {
     float: left;
