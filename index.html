@@ -26,10 +26,11 @@
       <ul>
         <li id="info-agree">By clicking submit, you are agreeing to: </li>
         <li>1. Not post anything illegal content on this website</li>
-        <li id="info-email">2. Provide a valid email address</li>
-        <li id="info-password">3. Your password length must larger than 8 characters</li>
-        <li id="info-birthday">4. Must be 18 years of age</li>
-        <li id="info-fun">5. Please have fun :)</li>
+        <li id="info-name">2. Your username cannot be longer than 12 letter or numbers</li>
+        <li id="info-email">3. Provide a valid email address</li>
+        <li id="info-password">4. Your password length must larger than 8 characters</li>
+        <li id="info-birthday">5. Must be 18 years of age</li>
+        <li id="info-fun">6. Please have fun :)</li>
         <li id="terms">We will notify you in advance for any changes we made</li>
       </ul>
     </section>
@@ -37,6 +38,10 @@
     <section id="form" class="form">
       <form action="#null" method="post" novalidate>
         <ul id="form-content">
+          <li>
+            <label for="name">Username</label>
+            <input placeholder="Joe Lee" type="text" id="name" name="name" />
+          </li>
           <li>
             <label for="email">Email</label>
             <input placeholder="xxxx@domain.com" type="email" id="email" name="email" />

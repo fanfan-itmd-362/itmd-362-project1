@@ -176,4 +176,7 @@ li {
   .welcome {
     width: 50%;
   }
+  .informaion {
+    padding-bottom: 3.6666666667em; /* 66 / 18 = 3.6666666667 */
+  }
 }

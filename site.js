@@ -12,20 +12,31 @@ jQuery(function($) {
 
   $('#form').on("submit", function(e) {
     var userInput = {
+      name: $('#name').val(),
       email: $('#email').val(),
       passwd: $('#password').val(),
       birthday: $('#birthday').val()
     };
     var verify = {
+      name: false,
       email: false,
       passwd: false,
       birthday: false
     };
-    var reg = /^([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    var reg = {
+      name: /^[0-9a-zA-Z\s]+$/,
+      email: /^([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
+    };
 
     remove_red();
 
-    if (!reg.test(userInput.email)) {
+    if (!reg.name.test(userInput.name) || userInput.name.length > 12) {
+      $('#info-name').addClass('red');
+      $('#name').addClass('red');
+    } else {
+      verify.name = true;
+    }
+    if (!reg.email.test(userInput.email)) {
       $('#info-email').addClass('red');
       $('#email').addClass('red');
     } else {
@@ -45,9 +56,9 @@ jQuery(function($) {
       verify.birthday = true;
     }
 
-    if (verify.email === true && verify.passwd === true && verify.birthday === true) {
+    if (verify.name === true && verify.email === true && verify.passwd === true && verify.birthday === true) {
       $(this).remove();
-      $('div').append('<section id="welcome"><ul><li id="submitted">Welcome to our community</li><li id="passwd">Your Password is "' + userInput.passwd + '"</li></ul></section>');
+      $('div').append('<section id="welcome"><ul><li id="submitted">' + userInput.name + ', welcome to our community</li><li id="passwd">Your Password is "' + userInput.passwd + '"</li></ul></section>');
       $('#info-fun').addClass('green');
       return true;
     }
@@ -55,6 +66,8 @@ jQuery(function($) {
   });
 
   function remove_red() {
+    $('#info-name').removeClass('red');
+    $('#name').removeClass('red');
     $('#info-email').removeClass('red');
     $('#email').removeClass('red');
     $('#info-password').removeClass('red');
