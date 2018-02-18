@@ -11,7 +11,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 html {
   font-size: 1.125em; /* 18 / 16 = 1.125 */
   line-height: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
-  font-family: Roboto, sans-serif, Helvetica, Arial;
+  font-family: "Roboto Slab", sans-serif, Helvetica, Arial;
   text-decoration: none;
 }
 body {
@@ -35,7 +35,8 @@ h2 {
 p {
   padding-top: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
   padding-bottom: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
-  font-family: Courier;
+  line-height: 1.8333333333em; /* 33 / 18 = 1.8333333333 */
+  font-family: Bitter;
 }
 
 label, input {
