@@ -165,6 +165,7 @@ li {
   }
   #information {
     float: left;
+    padding-right: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
   }
   #passwd {
     padding-top: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
