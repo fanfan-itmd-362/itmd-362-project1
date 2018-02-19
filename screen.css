@@ -42,15 +42,17 @@ p {
 label, input {
   display: block;
   margin-bottom: 0;
+  line-height: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
 }
 input {
   box-sizing: border-box;
-  padding: 0.7222222222em; /* 13 / 18 = 0.7222222222 */
+  padding: 0.6111111111em; /* 11 / 18 = 0.6111111111 */
+  height: 2.4444444444em; /* 44 / 18 = 2.4444444444 */
   border: 0;
   border-radius: 0;
   font-family: inherit;
   font-size: inherit;
-  line-height: 1em;
+  line-height: 1.2222222222em; /* 22 / 18 = 1.2222222222 */
   background-color: #EEE;
 }
 input[type="submit"] {
@@ -136,7 +138,7 @@ li {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    padding-top: 60%;
+    padding-top: 21.9166666667em; /* 1578 / 18 * 25% = 21.9166666667 */
   }
   #info-paragraph {
     background-color: white;
@@ -161,7 +163,7 @@ li {
   }
 
   #banner {
-    padding-top: 40%;
+    padding-top: 26.3em; /* 1578 / 18 * 30% = 26.3 */
   }
   #information {
     float: left;
